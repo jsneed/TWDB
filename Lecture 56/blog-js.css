@@ -1,0 +1,47 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.blog {
+    width: 55%;
+    margin: 15px auto;
+    border: 20px solid #bdc3c7;
+    padding: 20px;
+}
+
+.blog-post {
+
+}
+
+/*.post-date */
+h3 {
+    color: #3498db;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+
+/*.post-title */
+h2 {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.post-content {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.post-content p:nth-of-type(1) {
+    border-left: 6px solid #bdc3c7;
+    padding-left: 6px;
+}
+
+hr {
+    color: #bdc3c7;
+    background-color: #bdc3c7;
+    height: 1px;
+    opacity: .6;
+}

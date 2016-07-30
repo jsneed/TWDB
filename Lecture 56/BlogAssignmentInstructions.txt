@@ -1,0 +1,12 @@
+border color    #bdc3c7
+date color      #3498db
+h2 color        #2c3e50
+
+font-family     source sans pro
+
+
+
+
+spacing in date font-size
+left border on 1st paragraph
+hr line between blog posts

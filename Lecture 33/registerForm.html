@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+
+        <form method="get">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="your first name" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="your last name" required>
+            <div/>
+
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+
+                <label for="other">Other</label>
+                <input type="radio" name="gender" id="other" value="other">
+            <div/>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="your password" required pattern=".{5,10}" title="Passwrod must be between 5 and 10 characters.">
+            <div/>
+
+            <div>
+                <label for="birthday">
+                    Birthday:
+                    <select name="month">
+                        <option>Month</option>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                    </select>
+
+                    <select name="day">
+                        <option>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+
+                    <select name="year">
+                        <option>Year</option>
+                        <option>1975</option>
+                        <option>1979</option>
+                        <option>1980</option>
+                    </select>
+                </label>
+            <div/>
+
+            <div>
+                <label for="terms">I agree to the terms and conditions</label>
+                <input type="checkbox" id="terms" name="terms">
+            <div/>
+
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </body>
+</html>
