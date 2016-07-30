@@ -1,0 +1,41 @@
+Developer Documentation
+---------------------
+https://developer.mozilla.org
+
+
+
+CSS Reference
+---------------------
+http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
+http://www.csszengarden.com/
+
+
+
+Fonts
+---------------------
+https://fonts.google.com
+
+http://fontawesome.io/ - Mostly Icons
+
+
+
+Bootstrap
+---------------------
+http://getbootstrap.com/
+
+
+
+Cool Online Tools
+---------------------
+https://www.terminal.com - paired programming with a terminal
+
+https://beta.codenvy.com - Cloud IDE
+
+https://runnable.io/ - run projects, sandbox service for your projects
+
+https://codepen.io/jsneed/ - HTML, CSS & JS examples in the cloud
+
+https://gist.github.com/ - Share code snippets
+
+https://gitter.im - Developer boards / instant messaging
