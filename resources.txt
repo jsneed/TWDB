@@ -20,6 +20,12 @@ http://fontawesome.io/ - Mostly Icons
 
 
 
+Gradients
+---------------------
+http://uigradients.com/#
+
+
+
 Bootstrap
 ---------------------
 http://getbootstrap.com/
