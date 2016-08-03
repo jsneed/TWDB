@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Web Developer Bootcamp - Lecture 177 - Patatap Clone - Code Along</title>
+        <style>
+            canvas {
+                width: 100%;
+                height: 100%;
+                background: black;
+            }
+
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+        </style>
+        <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+        <script type="text/paperscript" canvas="myCanvas">
+            function onKeyDown(event)
+            {
+                //console.log("Max Height: " + view.size.height + "\tMax Width: " + view.size.width);
+
+                var maxPoint = new Point(view.size.width, view.size.height);
+                var randomPoint = Point.random();
+                var point = maxPoint * randomPoint;
+
+                console.log("Height: " + point.x + "\tWidth: " + point.y);
+
+                var circle = new Path.Circle(point, 10);
+                circle.fillColor = 'blue';
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="myCanvas" resize></canvas>
+    </body>
+</html>

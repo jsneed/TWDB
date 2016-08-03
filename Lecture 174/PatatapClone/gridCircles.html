@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Web Developer Bootcamp - Lecture 176 - Paper.js Exercise - JS</title>
+        <!--
+            Start at 0, 0 - End at 1000, 1000
+            Draw 100 circles
+            Radius 10
+        -->
+        <style>
+            canvas {
+                width: 100%;
+                height: 100%;
+                background: white;
+            }
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+        </style>
+        <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+        <script type="text/paperscript" canvas="myCanvas">
+        	for(var i = 0; i < 10; i++)
+            {
+                for(var j = 0; j < 10; j++)
+                {
+                    //var circle = new Path.Circle(new Point((j * 100), (i * 100)), 10);
+                    //circle.fillColor = "rgba(0, 0, 255, " + ((10-j) / 10) + ")";
+
+                    var triangle = new Path.RegularPolygon(new Point((j * 100), (i * 100)), 3, 10);
+                    triangle.fillColor = "rgba(96, 5, 187, " + ((10-j) / 10) + ")";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="myCanvas" resize></canvas>
+    </body>
+</html>
