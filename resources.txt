@@ -32,6 +32,14 @@ http://getbootstrap.com/
 
 
 
+JS Libraries
+---------------------
+http://paperjs.org/ - Paper.js — The Swiss Army Knife of Vector Graphics Scripting
+
+https://howlerjs.com/ - Howler.js - Audio library for the modern web
+
+
+
 Cool Online Tools
 ---------------------
 https://www.terminal.com - paired programming with a terminal
@@ -45,3 +53,7 @@ https://codepen.io/jsneed/ - HTML, CSS & JS examples in the cloud
 https://gist.github.com/ - Share code snippets
 
 https://gitter.im - Developer boards / instant messaging
+
+http://patatap.com/ - Just plays sounds and animations
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
