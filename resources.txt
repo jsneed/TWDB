@@ -57,3 +57,5 @@ https://gitter.im - Developer boards / instant messaging
 http://patatap.com/ - Just plays sounds and animations
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
+
+http://stackshare.io/ - See what stacks companies are using
