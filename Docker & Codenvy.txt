@@ -1,0 +1,84 @@
+Codenvy
+
+NodeWS3
+
+http://beta.codenvy.com/api/recipe/recipexthsxtzex2nsxl5h/script
+
+FROM codenvy/node   ->  FROM codenvy/debian_jre ->  FROM debian:jessie
+
+https://hub.docker.com/r/codenvy/node/
+https://hub.docker.com/r/codenvy/debian_jre/
+https://hub.docker.com/r/library/debian/ ???
+
+Ruby, Node, Sass, Gulp, Bower, Grunt, Angular???
+JRE, Git, MC, curl, wget
+
+
+
+
+PhpWebWS
+
+http://beta.codenvy.com/api/recipe/recipervl1bd6bemzzyaim/script
+
+FROM codenvy/php    ->  FROM codenvy/debian_jre ->  FROM debian:jessie
+
+https://hub.docker.com/r/codenvy/php/
+https://hub.docker.com/r/codenvy/debian_jre/
+https://hub.docker.com/r/library/debian/ ???
+
+PHP, Apache2, MySQL, https://getcomposer.org
+JRE, Git, MC, curl, wget
+
+
+
+
+JavaWS2
+
+http://beta.codenvy.com/api/recipe/recipe21erxaydy9nnlduc/script
+
+FROM codenvy/ubuntu_gradle -> FROM codenvy/ubuntu_jdk8  -> FROM ubuntu
+
+https://hub.docker.com/r/codenvy/ubuntu_gradle/
+https://hub.docker.com/r/codenvy/ubuntu_jdk8/
+https://hub.docker.com/r/library/ubuntu/ ???
+
+Ubuntu, JDK1.8, Gradle2.3
+Ubuntu, JDK8, Maven 3, git, curl, nmap, mc, cbuild, Tomcat 8
+
+
+Get the OS Name:
+uname -a
+
+
+http://keyserver.ubuntu.com/pks/lookup?op=vindex&search=mongodb&fingerprint=on
+
+docker images
+docker ps -a
+docker rmi -f 691fa319b36e      #remove an image
+docker run docker-whale
+
+docker build -t mongodb .
+docker tag b09f91badef4 jsneed/mongodb:latest       #https://docs.docker.com/engine/getstarted/step_six/
+docker login --username=jsneed --email=jsneed@gmail.com
+docker push jsneed/mongodb
+
+
+https://github.com/codenvy/dockerfiles/blob/master/ubuntu_jre/Dockerfile
+
+https://github.com/codenvy/dockerfiles/blob/master/php/ubuntu/Dockerfile
+
+https://github.com/codenvy/dockerfiles/blob/master/node/ubuntu/Dockerfile
+
+https://github.com/codenvy/dockerfiles/blob/master/ruby_rails/Dockerfile
+
+https://github.com/docker-library/mongo
+
+https://github.com/docker-library/mongo/blob/master/3.3/Dockerfile
+
+https://github.com/docker/docker/blob/master/docs/examples/mongodb/Dockerfile
+
+https://docs.docker.com/engine/examples/mongodb/
+
+https://github.com/codenvy/dockerfiles
+
+https://hub.docker.com/
