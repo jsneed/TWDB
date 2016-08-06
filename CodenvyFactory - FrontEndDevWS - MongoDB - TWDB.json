@@ -25,24 +25,24 @@
                     {
                         "dev": true,
                         "limits": {
-                            "ram": 2048
+                            "ram": 1024
                         },
                         "name": "dev-machine",
                         "source": {
-                            "location": "",
+                            "content": "FROM jsneed/ubuntu-jre-nodejs",
                             "type": "dockerfile"
                         },
                         "type": "docker"
                     },
                     {
-                        "dev": true,
+                        "dev": false,
                         "limits": {
-                            "ram": 2048
+                            "ram": 1024
                         },
                         "name": "db-machine",
                         "source": {
                             "type": "dockerfile",
-                            "location": "jsneed/mongodb"
+                            "content": "FROM jsneed/mongodb"
                         },
                         "type": "docker"
                     }
@@ -68,7 +68,7 @@
                 "problems": [],
                 "source": {
                     "location": "https://github.com/jsneed/TestRepo.git",
-                    "parameters": { 
+                    "parameters": {
                         "keepVcs" : "true"
                     },
                     "type": "git"
