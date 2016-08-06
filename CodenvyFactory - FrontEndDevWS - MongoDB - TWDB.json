@@ -1,0 +1,109 @@
+{
+    "creator": {
+        "email": "jsneed@gmail.com",
+        "name": "J Sneed"
+    },
+    "links": [],
+    "name": "CodenvyFactory - FrontEndDevWS - MongoDB - TWDB Template",
+    "v": "4.0",
+    "workspace": {
+        "attributes": {},
+        "commands": [
+            {
+                "attributes": {
+                    "previewUrl": "http://${server.port.3000}"
+                },
+                "commandLine": "cd /projects/nodejs-hello-world && node app/app.js",
+                "name": "nodejs-hello-world: run",
+                "type": "custom"
+            }
+        ],
+        "defaultEnv": "dev",
+        "environments": [
+            {
+                "machineConfigs": [
+                    {
+                        "dev": true,
+                        "limits": {
+                            "ram": 2048
+                        },
+                        "name": "dev-machine",
+                        "source": {
+                            "location": "",
+                            "type": "dockerfile"
+                        },
+                        "type": "docker"
+                    },
+                    {
+                        "dev": true,
+                        "limits": {
+                            "ram": 2048
+                        },
+                        "name": "db-machine",
+                        "source": {
+                            "type": "dockerfile",
+                            "location": "jsneed/mongodb"
+                        },
+                        "type": "docker"
+                    }
+                ],
+                "name": "dev"
+            }
+        ],
+        "links": [],
+        "name": "FrontEndDevWS",
+        "projects": [
+            {
+                "attributes": {
+                    "local_branch"         : [ "master" ],
+                    "contribute_to_branch" : [ "master" ]
+                },
+                "links": [],
+                "mixins": [
+                    "pullrequest", "git"
+                ],
+                "modules": [],
+                "name": "TestRepo",
+                "path": "/TestRepo",
+                "problems": [],
+                "source": {
+                    "location": "https://github.com/jsneed/TestRepo.git",
+                    "parameters": { 
+                        "keepVcs" : "true"
+                    },
+                    "type": "git"
+                },
+                "type": "blank"
+            },
+            {
+                "attributes": {
+                    "contribute_to_branch": [
+                        "master"
+                    ],
+                    "git.current.branch.name": [
+                        "master"
+                    ],
+                    "git.repository.remotes": [
+                        "https://github.com/che-samples/web-nodejs-sample.git"
+                    ],
+                    "vcs.provider.name": [
+                        "git"
+                    ]
+                },
+                "mixins": [
+                    "pullrequest",
+                    "git"
+                ],
+                "name": "nodejs-hello-world",
+                "path": "/nodejs-hello-world",
+                "problems": [],
+                "source": {
+                    "location": "https://github.com/che-samples/web-nodejs-sample.git",
+                    "parameters": {},
+                    "type": "git"
+                },
+                "type": "node-js"
+            }
+        ]
+    }
+}

@@ -82,3 +82,6 @@ https://docs.docker.com/engine/examples/mongodb/
 https://github.com/codenvy/dockerfiles
 
 https://hub.docker.com/
+
+
+http://walidhosseini.com/journal/2015/02/19/node-mongo-containers.html
