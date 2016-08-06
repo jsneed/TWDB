@@ -25,11 +25,11 @@
                     {
                         "dev": true,
                         "limits": {
-                            "ram": 1024
+                            "ram": 2048
                         },
                         "name": "dev-machine",
                         "source": {
-                            "content": "FROM jsneed/ubuntu-jre-nodejs",
+                            "content": "FROM jsneed/ubuntu-jre-nodejs-rails-python",
                             "type": "dockerfile"
                         },
                         "type": "docker"
