@@ -12,6 +12,13 @@ https://eclipse-che.readme.io/docs/recipes
 
 
 
+Samples
+-----------------
+https://github.com/codenvy/factories
+
+https://github.com/codenvy-templates
+
+
 
 
 Other Info
