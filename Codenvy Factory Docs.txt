@@ -1,0 +1,21 @@
+Codenvy Factory Docs
+
+http://blog.codenvy.com/building-first-factory/
+
+https://codenvy.readme.io/docs/factories
+
+https://eclipse-che.readme.io/docs/workspace
+
+https://eclipse-che.readme.io/v4.4/docs/workspace#section-projects-object
+
+https://eclipse-che.readme.io/docs/recipes
+
+
+
+
+
+Other Info
+-----------------
+https://eclipse-che.readme.io/docs/plug-ins
+
+https://beta.codenvy.com/api/recipe/recipe2unsobngbehn6dxl/script
