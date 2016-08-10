@@ -13,6 +13,10 @@ app.get("/dog", function(req, res){
     res.send("Roof!");
 });
 
+app.get("*", function(req, res){
+    res.send("You are a star!");
+});
+
 //Tell Express to listen for requests (start server)
 //Need to user process.env.* for Cloud9 IDE
 app.listen(3000, function(){

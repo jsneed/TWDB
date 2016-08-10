@@ -38,6 +38,14 @@ http://getbootstrap.com/
 
 
 
+Node.js Docs
+---------------------
+http://expressjs.com/
+
+https://www.nodejitsu.com/documentation/appendix/package-json/
+
+
+
 JS Libraries
 ---------------------
 http://paperjs.org/ - Paper.js — The Swiss Army Knife of Vector Graphics Scripting
