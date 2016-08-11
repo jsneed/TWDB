@@ -9,6 +9,12 @@ app.use(bodyParser.urlencoded({extended : true}));
 var campgrounds = [
     {name : "Salmon Creek", image : "http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5259404.jpg"},
     {name : "Granite Hill", image : "http://www.freeguidetonwcamping.com/oregon_washington_main/Camping_Photos/Four_Seasons_Campground_4.jpg"},
+    {name : "Mountain Goat's Rest", image : "http://www.acadiamagic.com/1170px/blackwoods-1197.jpg"},
+    {name : "Salmon Creek", image : "http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5259404.jpg"},
+    {name : "Granite Hill", image : "http://www.freeguidetonwcamping.com/oregon_washington_main/Camping_Photos/Four_Seasons_Campground_4.jpg"},
+    {name : "Mountain Goat's Rest", image : "http://www.acadiamagic.com/1170px/blackwoods-1197.jpg"},
+    {name : "Salmon Creek", image : "http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5259404.jpg"},
+    {name : "Granite Hill", image : "http://www.freeguidetonwcamping.com/oregon_washington_main/Camping_Photos/Four_Seasons_Campground_4.jpg"},
     {name : "Mountain Goat's Rest", image : "http://www.acadiamagic.com/1170px/blackwoods-1197.jpg"}
 ];
 
