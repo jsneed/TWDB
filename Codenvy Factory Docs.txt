@@ -26,3 +26,8 @@ Other Info
 https://eclipse-che.readme.io/docs/plug-ins
 
 https://beta.codenvy.com/api/recipe/recipe2unsobngbehn6dxl/script
+
+
+http://blog.codenvy.com/two-project-two-challenge-solution/
+
+https://eclipse-che.readme.io/docs/commands

@@ -1,0 +1,97 @@
+{
+    "creator": {
+        "email": "jsneed@gmail.com",
+        "name": "J Sneed"
+    },
+    "name": "FrontEndFactory",
+    "v": "4.0",
+    "workspace": {
+        "commands": [
+      {
+        "commandLine": "cd /usr/bin && sudo -u mongodb ./mongod --nojournal",
+        "name": "Start MongoDB",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "custom"
+      },
+      {
+        "commandLine": "mongo",
+        "name": "Start MongoDB Shell",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "custom"
+      },
+      {
+        "commandLine": "echo \"Port 3000 ->\" + ${server.port.3000}",
+        "name": "Test",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "custom"
+      }],
+        "defaultEnv": "FrontEndWS2",
+        "environments": [
+            {
+                "machineConfigs": [
+                    {
+                        "dev": true,
+                        "envVariables": {},
+                        "limits": {
+                            "ram": 2000
+                        },
+                        "links": [],
+                        "name": "ws-machine",
+                        "servers": [],
+                        "source": {
+                            "content": "FROM jsneed/ubuntu-jre-nodejs-rails-python-php",
+                            "type": "dockerfile"
+                        },
+                        "type": "docker"
+                    },
+                    {
+                        "dev": false,
+                        "envVariables": {},
+                        "limits": {
+                            "ram": 1000
+                        },
+                        "links": [],
+                        "name": "db-machine",
+                        "servers": [],
+                        "source": {
+                            "content": "FROM jsneed/mongodb",
+                            "type": "dockerfile"
+                        },
+                        "type": "docker"
+                    }
+                ],
+                "name": "FrontEndWS2"
+            }
+        ],
+        "links": [],
+        "name": "FrontEndWS2",
+        "projects": [
+            {
+                "attributes": {
+                    "contribute_to_branch": [
+                        "master"
+                    ]
+                },
+                "links": [],
+                "mixins": [
+                    "pullrequest"
+                ],
+                "name": "TWDB",
+                "path": "/TWDB",
+                "problems": [],
+                "source": {
+                    "location": "https://github.com/jsneed/TWDB.git",
+                    "parameters": {},
+                    "type": "git"
+                },
+                "type": "blank"
+            }
+        ]
+    }
+}
