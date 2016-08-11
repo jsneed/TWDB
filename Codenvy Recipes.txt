@@ -1,0 +1,134 @@
+[{
+	"tags": [],
+	"creator": "usersnc4bqsjfrw5s9dp",
+	"name": "generated-Node",
+	"id": "recipe2unsobngbehn6dxl",
+	"type": "docker",
+	"script": "FROM codenvy/node",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipe2unsobngbehn6dxl/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipe2unsobngbehn6dxl",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}, {
+	"tags": ["debian", "java", "cbuild", "nmap", "maven", "curl", "tomcat"],
+	"creator": "codenvy",
+	"name": "DEBIAN_JDK8",
+	"id": "recipe_debian",
+	"type": "docker",
+	"script": "FROM codenvy/debian_jdk8",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipe_debian/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipe_debian",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}, {
+	"tags": ["java", "ubuntu", "cbuild", "nmap", "maven", "curl", "tomcat", "gwt"],
+	"creator": "codenvy",
+	"name": "UBUNTU_JDK8",
+	"id": "recipe_ubuntu",
+	"type": "docker",
+	"script": "FROM codenvy/ubuntu_jdk8",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipe_ubuntu/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipe_ubuntu",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}, {
+	"tags": [],
+	"creator": "usersnc4bqsjfrw5s9dp",
+	"name": "generated-PHP",
+	"id": "recipervl1bd6bemzzyaim",
+	"type": "docker",
+	"script": "FROM codenvy/php",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipervl1bd6bemzzyaim/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipervl1bd6bemzzyaim",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}, {
+	"tags": [],
+	"creator": "usersnc4bqsjfrw5s9dp",
+	"name": "generated-Java",
+	"id": "recipesu2mcawramlkhvcr",
+	"type": "docker",
+	"script": "FROM codenvy/ubuntu_jdk8",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipesu2mcawramlkhvcr/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipesu2mcawramlkhvcr",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}, {
+	"tags": [],
+	"creator": "usersnc4bqsjfrw5s9dp",
+	"name": "generated-Node",
+	"id": "recipexthsxtzex2nsxl5h",
+	"type": "docker",
+	"script": "FROM codenvy/node",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipexthsxtzex2nsxl5h/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipexthsxtzex2nsxl5h",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}, {
+	"tags": [],
+	"creator": "usersnc4bqsjfrw5s9dp",
+	"name": "generated-Node",
+	"id": "recipezwzapr0jk88qwfqa",
+	"type": "docker",
+	"script": "FROM codenvy/node",
+	"links": [{
+		"produces": "text/plain",
+		"href": "https://beta.codenvy.com/api/recipe/recipezwzapr0jk88qwfqa/script",
+		"rel": "get recipe script",
+		"method": "GET",
+		"parameters": []
+	}, {
+		"href": "https://beta.codenvy.com/api/recipe/recipezwzapr0jk88qwfqa",
+		"rel": "remove recipe",
+		"method": "DELETE",
+		"parameters": []
+	}]
+}]
