@@ -45,7 +45,11 @@ app.get("/campgrounds/new", function(req, res) {
 
 //Tell Express to listen for requests (start server)
 //Need to user process.env.* for Cloud9 IDE
-var port = 3000; //process.env.PORT)
-app.listen(port, function() {
+var port = 3000;
+
+//app.listen(port, function() {
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log(process.env.PORT);
+    console.log(process.env.IP);
     console.log("Yelp Camp v1 -> Server has started on port: " + port);
 });
