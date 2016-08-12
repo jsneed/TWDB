@@ -45,7 +45,7 @@ app.get("/campgrounds/new", function(req, res) {
 
 //Need to user process.env.* for Cloud9 IDE
 var port = process.env.PORT ? process.env.PORT : 3000;
-var ip = process.env.IP ? process.env.IP : "127.0.0.1";
+var ip = process.env.IP ? process.env.IP : "0.0.0.0";
 
 //Tell Express to listen for requests (start server)
 app.listen(port, ip, function(){
