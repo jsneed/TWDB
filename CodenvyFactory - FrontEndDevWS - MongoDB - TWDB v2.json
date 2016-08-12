@@ -30,7 +30,15 @@
           "previewUrl": ""
         },
         "type": "custom"
-      }],
+    },
+    {
+      "commandLine": "cd \"/projects/TWDB/Lecture 220/YelpCamp\" && node app.js",
+      "name": "Start YelpCamp",
+      "attributes": {
+        "previewUrl": "http://${server.port.3000}"
+      },
+      "type": "custom"
+    }],
         "defaultEnv": "FrontEndWS2",
         "environments": [
             {

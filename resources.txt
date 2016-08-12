@@ -52,6 +52,12 @@ https://www.nodejitsu.com/documentation/appendix/package-json/
 
 
 
+Semantic UI
+---------------------
+http://semantic-ui.com/
+
+
+
 JS Libraries
 ---------------------
 http://paperjs.org/ - Paper.js — The Swiss Army Knife of Vector Graphics Scripting
