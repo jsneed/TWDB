@@ -2,15 +2,17 @@ var express    = require("express"),
     app        = express(),
     bodyParser = require("body-parser"),
     mongoose   = require("mongoose"),
+    Comment    = require("./models/comment"),
     Campground = require("./models/campground"),
     seedDB     = require("./seeds");
-    //Comment    = require("./models/comment"),
+    //,
     //User       = require("./models/user");
 
 mongoose.connect("mongodb://localhost/yelp_camp_v3");
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended : true}));
+app.use(express.static(__dirname + "/public"));
 
 seedDB();
 
@@ -35,7 +37,7 @@ app.get("/campgrounds", function(req, res) {
         }
         else
         {
-            res.render("index", {campgrounds : camps});
+            res.render("campgrounds/index", {campgrounds : camps});
         }
     })
 });
@@ -65,7 +67,7 @@ app.post("/campgrounds", function(req, res) {
 });
 
 app.get("/campgrounds/new", function(req, res) {
-    res.render("new");
+    res.render("campgrounds/new");
 });
 
 //Show - Display one Campground
@@ -77,10 +79,56 @@ app.get("/campgrounds/:id", function(req, res) {
         }
         else {
             //Redirect to Campgrounds Page
-            res.render("show", {campground : foundCamp});
+            res.render("campgrounds/show", {campground : foundCamp});
         }
     });
 });
+
+/* -------------------------------------------------------------------------------------------- */
+//Comment Routes
+
+//Comment Create Form
+app.get("/campgrounds/:id/comments/new", function(req, res) {
+    //Find Campground in MongoDB
+    Campground.findById(req.params.id).populate("comments").exec(function(err, foundCamp) {
+        if(err) {
+            console.log(err);
+        }
+        else {
+            //Redirect to Comments New Page
+            res.render("comments/new", {campground : foundCamp});
+        }
+    });
+});
+
+//
+app.post("/campgrounds/:id/comments", function(req, res) {
+    //Find Campground in MongoDB
+    Campground.findById(req.params.id, function(err, foundCamp) {
+        if(err) {
+            console.log(err);
+            res.redirect("/campgrounds");
+        }
+        else {
+            Comment.create(req.body.comment, function(err, comment){
+                if(err) {
+                    console.log(err);
+                }
+                else {
+                    //Add comment to array
+                    foundCamp.comments.push(comment);
+                    foundCamp.save();
+
+                    //Redirect to Comments New Page
+                    res.redirect("/campgrounds/" + foundCamp._id);
+                }
+            });
+
+        }
+    });
+});
+
+/* -------------------------------------------------------------------------------------------- */
 
 //Need to user process.env.* for Cloud9 IDE
 var port = process.env.PORT ? process.env.PORT : 3000;

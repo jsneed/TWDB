@@ -95,3 +95,16 @@ http://patatap.com/ - Just plays sounds and animations
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 
 http://stackshare.io/ - See what stacks companies are using
+
+
+
+Lorem Ipsum Generators
+---------------------
+http://meettheipsums.com/
+http://hipsum.co/
+http://www.cipsum.com/
+http://officeipsum.com/
+https://www.sitepoint.com/10-lorem-ipsum-alternatives/
+http://loremipsumgenerators.com/
+http://www.batman-ipsum.com/
+http://trumpipsum.net/
