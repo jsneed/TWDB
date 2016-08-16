@@ -64,6 +64,8 @@ http://paperjs.org/ - Paper.js — The Swiss Army Knife of Vector Graphics Scrip
 
 https://howlerjs.com/ - Howler.js - Audio library for the modern web
 
+http://passportjs.org/ - Authentication framework that plugs into hundreds of 3rd party providers (i.e. twitter, facebook, google, fitbit)
+
 
 
 Command Line Info
