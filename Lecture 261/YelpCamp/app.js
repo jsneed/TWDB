@@ -1,12 +1,15 @@
-var express    = require("express"),
-    app        = express(),
-    bodyParser = require("body-parser"),
-    mongoose   = require("mongoose"),
-    Comment    = require("./models/comment"),
-    Campground = require("./models/campground"),
-    seedDB     = require("./seeds");
-    //,
-    //User       = require("./models/user");
+var express       = require("express"),
+    app           = express(),
+    bodyParser    = require("body-parser"),
+    mongoose      = require("mongoose"),
+    passport      = require("passport"),
+    LocalStrategy = require("passport-local"),
+
+    Comment       = require("./models/comment"),
+    Campground    = require("./models/campground"),
+    User          = require("./models/user"),
+    seedDB        = require("./seeds");
+
 
 mongoose.connect("mongodb://localhost/yelp_camp_v4");
 
@@ -16,18 +19,30 @@ app.use(express.static(__dirname + "/public"));
 
 seedDB();
 
-/*
-Campground.create({name : "Fisher's Creek", image : "http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5259404.jpg", description : "Shitty campground"}, function(err, camp){
-    if(err) console.log(err);
-    else console.log(camp);
-});
-*/
+/* -------------------------------------------------------------------------------------------- */
+//Passport Configuration
 
-//Index - Show All Campgrounds
+app.use(require("express-session")({
+    secret: "habadashery is passe...",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+/* -------------------------------------------------------------------------------------------- */
+//Campground Routes
+
 app.get("/", function(req, res) {
     res.render("landing");
 });
 
+//Index - Show All Campgrounds
 app.get("/campgrounds", function(req, res) {
     //Get All Cats
     Campground.find({}, function(err, camps){
@@ -129,6 +144,28 @@ app.post("/campgrounds/:id/comments", function(req, res) {
 });
 
 /* -------------------------------------------------------------------------------------------- */
+//Auth Routes
+
+//Show register form
+app.get("/register", function(req, res){
+    res.render("register");
+});
+
+//Handle sign up logic
+app.post("/register", function(req, res){
+    var newUser = new User({username : req.body.username});
+    User.register(newUser, req.body.password, function(err, user){
+        if(err) {
+            console.log(err);
+            res.render("register");
+        }
+        passport.authenticate("local")(req, res, function(){
+            res.redirect("/campgrounds");
+        });
+    });
+});
+
+/* -------------------------------------------------------------------------------------------- */
 
 //Need to user process.env.* for Cloud9 IDE
 var port = process.env.PORT ? process.env.PORT : 3000;
@@ -138,5 +175,5 @@ var ip = process.env.IP ? process.env.IP : "0.0.0.0";
 app.listen(port, ip, function(){
     console.log(port);
     console.log(ip);
-    console.log("Yelp Camp v2 -> Server has started on " + ip + ":" + port);
+    console.log("Yelp Camp v4 -> Server has started on " + ip + ":" + port);
 });
