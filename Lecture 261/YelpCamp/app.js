@@ -35,6 +35,14 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+//Has to go below passport config calls above
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user;
+    console.log("User");
+    console.log(req.user);
+    next();
+});
+
 /* -------------------------------------------------------------------------------------------- */
 //Campground Routes
 
@@ -44,6 +52,9 @@ app.get("/", function(req, res) {
 
 //Index - Show All Campgrounds
 app.get("/campgrounds", function(req, res) {
+    //Print user info from passport
+    //console.log(req.user);
+
     //Get All Cats
     Campground.find({}, function(err, camps){
         if(err)
@@ -103,7 +114,7 @@ app.get("/campgrounds/:id", function(req, res) {
 //Comment Routes
 
 //Comment Create Form
-app.get("/campgrounds/:id/comments/new", function(req, res) {
+app.get("/campgrounds/:id/comments/new", isLoggedIn, function(req, res) {
     //Find Campground in MongoDB
     Campground.findById(req.params.id).populate("comments").exec(function(err, foundCamp) {
         if(err) {
@@ -117,7 +128,7 @@ app.get("/campgrounds/:id/comments/new", function(req, res) {
 });
 
 //
-app.post("/campgrounds/:id/comments", function(req, res) {
+app.post("/campgrounds/:id/comments", isLoggedIn, function(req, res) {
     //Find Campground in MongoDB
     Campground.findById(req.params.id, function(err, foundCamp) {
         if(err) {
@@ -164,6 +175,33 @@ app.post("/register", function(req, res){
         });
     });
 });
+
+//Show login form
+app.get("/login", function(req, res){
+    res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/campgrounds",
+    failureRedirect: "/login"
+}), function(req, res){
+
+});
+
+app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/campgrounds");
+});
+
+/* -------------------------------------------------------------------------------------------- */
+//Middleware
+
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/login");
+}
 
 /* -------------------------------------------------------------------------------------------- */
 
