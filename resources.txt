@@ -64,6 +64,10 @@ http://paperjs.org/ - Paper.js — The Swiss Army Knife of Vector Graphics Scrip
 
 https://howlerjs.com/ - Howler.js - Audio library for the modern web
 
+
+
+Node Libraries / Packages
+---------------------
 http://passportjs.org/ - Authentication framework that plugs into hundreds of 3rd party providers (i.e. twitter, facebook, google, fitbit)
 
 http://mongodb.github.io/node-mongodb-native/2.2/tutorials/crud/
@@ -71,6 +75,8 @@ http://mongodb.github.io/node-mongodb-native/2.2/tutorials/crud/
 http://caolan.github.io/async/docs.html
 
 http://mongoosejs.com/index.html
+
+https://github.com/jaredhanson/connect-flash
 
 
 

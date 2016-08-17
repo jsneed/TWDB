@@ -1,6 +1,7 @@
 var express = require("express");
 var router  = express.Router();
 var Campground = require("../models/campground");
+var middleware = require("../middleware");
 
 //Campground Routes
 
@@ -23,7 +24,7 @@ router.get("/", function(req, res) {
 });
 
 //Create a new campground
-router.post("/", isLoggedIn, function(req, res) {
+router.post("/", middleware.isLoggedIn, function(req, res) {
     //Get data from form
     var name = req.body.name;
     var image = req.body.image;
@@ -43,12 +44,13 @@ router.post("/", isLoggedIn, function(req, res) {
         }
         else {
             //Redirect to Campgrounds Page
+            req.flash("success", "Sucessfully created campground.");
             res.redirect("/campgrounds");
         }
     });
 });
 
-router.get("/new", isLoggedIn, function(req, res) {
+router.get("/new", middleware.isLoggedIn, function(req, res) {
     res.render("campgrounds/new");
 });
 
@@ -67,13 +69,14 @@ router.get("/:id", function(req, res) {
 });
 
 //Edit Campground
-router.get("/:id/edit", function(req, res) {
-    //Find Campground in MongoDB
+router.get("/:id/edit", middleware.checkCampOwnership, function(req, res) {
+    //Find Campground in MongoDB (again)
     Campground.findById(req.params.id).populate("comments").exec(function(err, foundCamp) {
         if(err) {
             console.log(err);
             //Redirect to Campgrounds Page
-            res.redirect("/campgrounds");
+            req.flash("error", "Campground not found.");
+            res.redirect("back");
         }
         else {
             //Redirect to Campgrounds Page
@@ -83,7 +86,7 @@ router.get("/:id/edit", function(req, res) {
 });
 
 //Update Campground
-router.put("/:id", function(req, res) {
+router.put("/:id", middleware.checkCampOwnership, function(req, res) {
     Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCamp) {
         if(err) {
             console.log(err);
@@ -92,13 +95,14 @@ router.put("/:id", function(req, res) {
         }
         else {
             //Redirect to Campground Page
+            req.flash("success", "Sucessfully updated campground.");
             res.redirect("/campgrounds/" + updatedCamp._id);
         }
     });
 });
 
 //Delete Campground
-router.delete("/:id", function(req, res) {
+router.delete("/:id", middleware.checkCampOwnership, function(req, res) {
     Campground.findByIdAndRemove(req.params.id, function(err) {
         if(err) {
             console.log(err);
@@ -106,17 +110,11 @@ router.delete("/:id", function(req, res) {
             res.redirect("/campgrounds");
         }
         else {
+            req.flash("success", "Sucessfully deleted campground.");
             //Redirect to Campgrounds Page
             res.redirect("/campgrounds");
         }
     });
 });
-
-function isLoggedIn(req, res, next) {
-    if(req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect("/login");
-}
 
 module.exports = router;

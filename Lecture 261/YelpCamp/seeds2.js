@@ -1,8 +1,6 @@
 //import parallel from 'async/parallel';
 var asyncs = require("async");
 
-var parallel = require("async/parallel");
-
 var mongoose   = require("mongoose"),
     Campground = require("./models/campground"),
     Comment    = require("./models/comment"),
@@ -61,7 +59,7 @@ function setupUsers(){
             }
             else {
                 users.push(user);
-                console.log(user);
+                //console.log(user);
                 callback();
             }
         });
@@ -89,7 +87,7 @@ function setupCamps(){
             }
             else {
                 camps.push(camp);
-                console.log(camp);
+                //console.log(camp);
                 callback();
             }
         });
@@ -126,7 +124,7 @@ function setupComments() {
                 camp.comments.push(comment);
                 camp.save();
 
-                console.log(comment);
+                //console.log(comment);
                 callback();
             }
         });

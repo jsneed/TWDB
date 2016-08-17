@@ -4,7 +4,8 @@ var express          = require("express"),
     mongoose         = require("mongoose"),
     passport         = require("passport"),
     LocalStrategy    = require("passport-local"),
-    methodOverride   = require("method-override");
+    methodOverride   = require("method-override"),
+    flash            = require("connect-flash");
 
 var Comment          = require("./models/comment"),
     Campground       = require("./models/campground"),
@@ -22,6 +23,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
+app.use(flash());
 
 seedDB2();
 
@@ -45,6 +47,8 @@ passport.deserializeUser(User.deserializeUser());
 //Adds user info to every route
 app.use(function(req, res, next) {
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash("error");
+    res.locals.success = req.flash("success");
     next();
 });
 
