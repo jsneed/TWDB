@@ -36,7 +36,7 @@ function seedDB() {
                     else
                     {
                         console.log("added camp");
-
+                        /*
                         //Create a Comment
                         Comment.create({text : "I hate camping", author : "Everbody"},
                             function(err, comment)
@@ -50,8 +50,10 @@ function seedDB() {
                                 }
                             }
                         );
+                        */camp.save();
                     }
                 });
+
             });
         }
     });
