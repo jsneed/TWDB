@@ -66,6 +66,12 @@ https://howlerjs.com/ - Howler.js - Audio library for the modern web
 
 http://passportjs.org/ - Authentication framework that plugs into hundreds of 3rd party providers (i.e. twitter, facebook, google, fitbit)
 
+http://mongodb.github.io/node-mongodb-native/2.2/tutorials/crud/
+
+http://caolan.github.io/async/docs.html
+
+http://mongoosejs.com/index.html
+
 
 
 Command Line Info
@@ -110,3 +116,17 @@ https://www.sitepoint.com/10-lorem-ipsum-alternatives/
 http://loremipsumgenerators.com/
 http://www.batman-ipsum.com/
 http://trumpipsum.net/
+
+
+
+Misc
+---------------------
+https://gohugo.io/ - A static website engine using Go (alternative to Wordpress)
+
+https://ghost.org/ - A publishing platform for professional bloggers
+
+
+
+Nice Blog Formats
+---------------------
+http://npf.io/blog/
