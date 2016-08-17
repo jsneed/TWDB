@@ -136,3 +136,15 @@ https://ghost.org/ - A publishing platform for professional bloggers
 Nice Blog Formats
 ---------------------
 http://npf.io/blog/
+
+
+
+Hosting
+---------------------
+https://modulus.io/
+
+https://www.nodejitsu.com/ -> Moved to Modulus
+
+https://www.digitalocean.com/
+
+https://www.heroku.com/home
