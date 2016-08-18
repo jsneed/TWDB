@@ -156,3 +156,29 @@ https://www.heroku.com/home
 MongoDB Hosting
 ---------------------
 https://mlab.com/ - MongoLab
+
+
+
+Further Reading
+---------------------
+https://leanpub.com/javascriptallongesix/read
+
+https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+
+http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+
+http://code.tutsplus.com/tutorials/javascript-hoisting-explained--net-15092
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+http://stackoverflow.com/questions/111102/how-do-javascript-closures-work
+
+https://www.sitepoint.com/javascript-closures-demystified/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
+
+https://www.sitepoint.com/oriented-programming-1-2/
+
+http://eloquentjavascript.net/1st_edition/chapter8.html
+
+http://code.tutsplus.com/tutorials/the-basics-of-object-oriented-javascript--net-7670
