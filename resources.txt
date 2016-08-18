@@ -159,6 +159,12 @@ https://mlab.com/ - MongoLab
 
 
 
+Env Variables
+---------------------
+https://medium.com/@rafaelvidaurre/managing-environment-variables-in-node-js-2cb45a55195f#.a4tiuf77y
+
+
+
 Further Reading
 ---------------------
 https://leanpub.com/javascriptallongesix/read
