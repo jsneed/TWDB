@@ -163,6 +163,8 @@ Env Variables
 ---------------------
 https://medium.com/@rafaelvidaurre/managing-environment-variables-in-node-js-2cb45a55195f#.a4tiuf77y
 
+https://www.npmjs.com/package/dotenv
+
 
 
 Further Reading
