@@ -80,6 +80,8 @@ http://mongoosejs.com/index.html
 
 https://github.com/jaredhanson/connect-flash
 
+https://github.com/creationix/nvm/blob/master/README.markdown - NVM - Node Version Management
+
 
 
 Command Line Info
