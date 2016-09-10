@@ -18,4 +18,4 @@ var colt2 = {
     }
 };
 
-colt2.sayHi();
+colt2.sayHi(); // Hi Colt (1000 milliseconds later)

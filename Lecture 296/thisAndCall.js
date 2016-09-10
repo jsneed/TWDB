@@ -12,5 +12,5 @@ var elie = {
     }
 };
 
-colt.sayHi();
-elie.sayHi();
+colt.sayHi(); // "Hi Colt"
+elie.sayHi(); // "Hi Elie"
